@@ -74,9 +74,13 @@
 
     <DockPanel Grid.Row="2"
                Background="White">
-      <TextBlock DockPanel.Dock="Left">Footer!</TextBlock>
-      <TextBlock DockPanel.Dock="Left">2024</TextBlock>
-      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">All rights reserved</TextBlock>
+      <TextBlock>Tags:</TextBlock>
+      <TextBlock>Tag1</TextBlock>
+      <TextBlock>Tag2</TextBlock>
+      <TextBlock>Tag3</TextBlock>
+      <TextBlock>Tag4</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">Rate this article</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">4/5</TextBlock>
     </DockPanel>
     
   </Grid>
