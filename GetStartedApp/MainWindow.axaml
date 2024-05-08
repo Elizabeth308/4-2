@@ -2,8 +2,82 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="200"
-        x:Class="GetStartedApp.MainWindow"
-        Title="GetStartedApp">
-    Welcome to Avalonia!
+        mc:Ignorable="d" 
+        Width="800" 
+        Height="700"
+        x:Class="ContainersAndDesign.MainWindow"
+        Title="ContainersAndDesign"
+        CanResize="True">
+  
+  <Window.Styles>
+    <Style Selector="TextBlock">
+      <Setter Property="Margin" Value="5"></Setter>
+      <Setter Property="Foreground" Value="White"></Setter>
+      <Setter Property="FontWeight" Value="Medium"></Setter>
+    </Style>
+    <Style Selector="DockPanel TextBlock">
+      <Setter Property="Margin" Value="25"></Setter>
+    </Style>
+    <Style Selector="ScrollViewer StackPanel">
+      <Setter Property="Margin" Value="12"></Setter>
+    </Style>
+    <Style Selector="Image">
+      <Setter Property="Margin" Value="25"></Setter>
+    </Style>
+    <Style Selector="ScrollViewer TextBlock:pointerover">
+      <Setter Property="Foreground" Value="Blue"></Setter>
+    </Style>
+  </Window.Styles>
+  
+  <Grid ShowGridLines="False"
+        RowDefinitions="auto,*,auto"
+        ColumnDefinitions="*, auto"
+        Background="White">
+    
+    <DockPanel Grid.Row="0"
+               Grid.ColumnSpan="2">
+      <TextBlock>Home</TextBlock>
+      <TextBlock>About</TextBlock>
+      <TextBlock>Blog's main topic 1</TextBlock>
+      <TextBlock>Blog's main topic 2</TextBlock>
+      <TextBlock>Blog's main topic 3</TextBlock>
+      <TextBlock>Assosiated topics</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">RSS</TextBlock>
+    </DockPanel>
+
+    <StackPanel Grid.Row="1"
+                Orientation="Vertical"
+                Background="White">
+      <TextBlock>Article 1</TextBlock>
+      <TextBlock TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque condimentum faucibus. Donec ac suscipit dolor. Etiam sit amet elit est. Morbi pretium placerat varius. Aliquam tempor ultricies vehicula. Cras et leo vestibulum, eleifend velit condimentum, blandit metus. Integer sapien nibh, aliquet ut orci sed, molestie tincidunt erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla tincidunt massa et lorem vehicula ornare et nec elit. Fusce efficitur nunc in iaculis cursus.</TextBlock>
+      <Image Source="resm:Avalonia.Skia.Assets.NoiseAsset_256X256_PNG.png?assembly=Avalonia.Skia"
+                   Height="200"
+                   Width="400"
+                   Stretch="Uniform"
+                   HorizontalAlignment="Center"></Image>
+    </StackPanel>
+
+
+    <StackPanel Grid.Row="1"
+                Gird.Column="1"
+                Orientation="Vertical"
+                Background="White">
+      <TextBlock TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque condimentum faucibus. Donec ac suscipit dolor. Etiam sit amet elit est. Morbi pretium placerat varius. Aliquam tempor ultricies vehicula. Cras et leo vestibulum, eleifend velit condimentum, blandit metus.</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">M͟o͟r͟e͟</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">Yesterday</TextBlock>
+      <TextBlock TextWrapping="Wrap">Donec laoreet risus in erat scelerisque hendrerit sed a turpis. Donec justo felis, condimentum nec venenatis in, gravida sagittis diam. Sed eu urna quam. Donec gravida sem vitae sollicitudin dapibus. Phasellus aliquet ut magna nec egestas. Etiam consequat hendrerit odio id venenatis. Vestibulum semper varius dapibus.</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">M͟o͟r͟e͟</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">1 week ago</TextBlock>
+    </StackPanel>
+
+
+
+    <DockPanel Grid.Row="2"
+               Background="White">
+      <TextBlock DockPanel.Dock="Left">Footer!</TextBlock>
+      <TextBlock DockPanel.Dock="Left">2024</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">All rights reserved</TextBlock>
+    </DockPanel>
+    
+  </Grid>
 </Window>
