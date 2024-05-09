@@ -3,16 +3,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" 
-        Width="800" 
-        Height="700"
-        x:Class="Program.MainWindow"
-        Title="Program"
-        CanResize="True">
+        Width="1200" 
+        Height="550"
+        x:Class="GetStartedApp.MainWindow"
+        Title="GetStartedApp"
+        CanResize="False">
   
   <Window.Styles>
     <Style Selector="TextBlock">
       <Setter Property="Margin" Value="5"></Setter>
-      <Setter Property="Foreground" Value="White"></Setter>
+      <Setter Property="Foreground" Value="Black"></Setter>
       <Setter Property="FontWeight" Value="Medium"></Setter>
     </Style>
     <Style Selector="DockPanel TextBlock">
@@ -29,13 +29,15 @@
     </Style>
   </Window.Styles>
   
-  <Grid ShowGridLines="False"
-        RowDefinitions="auto,*,auto"
-        ColumnDefinitions="*, auto"
+  <Grid ShowGridLines="True"
+        RowDefinitions="auto,auto,auto"
+        ColumnDefinitions="*,*"
         Background="White">
     
     <DockPanel Grid.Row="0"
-               Grid.ColumnSpan="2">
+               Grid.Column="0"
+               Grid.ColumnSpan="2"
+               Background="White">
       <TextBlock>Home</TextBlock>
       <TextBlock>About</TextBlock>
       <TextBlock>Blog's main topic 1</TextBlock>
@@ -46,10 +48,12 @@
     </DockPanel>
 
     <StackPanel Grid.Row="1"
+                Grid.Column="0"
                 Orientation="Vertical"
                 Background="White">
       <TextBlock>Article 1</TextBlock>
-      <TextBlock TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque condimentum faucibus. Donec ac suscipit dolor. Etiam sit amet elit est. Morbi pretium placerat varius. Aliquam tempor ultricies vehicula. Cras et leo vestibulum, eleifend velit condimentum, blandit metus. Integer sapien nibh, aliquet ut orci sed, molestie tincidunt erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla tincidunt massa et lorem vehicula ornare et nec elit. Fusce efficitur nunc in iaculis cursus.</TextBlock>
+      <TextBlock TextWrapping="Wrap"
+                  Margin="0,0,15,10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque condimentum faucibus. Donec ac suscipit dolor. Etiam sit amet elit est. Morbi pretium placerat varius. Aliquam tempor ultricies vehicula. Cras et leo vestibulum, eleifend velit condimentum, blandit metus. Integer sapien nibh, aliquet ut orci sed, molestie tincidunt erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla tincidunt massa et lorem vehicula ornare et nec elit. Fusce efficitur nunc in iaculis cursus.</TextBlock>
       <Image Source="resm:Avalonia.Skia.Assets.NoiseAsset_256X256_PNG.png?assembly=Avalonia.Skia"
                    Height="200"
                    Width="400"
@@ -73,14 +77,14 @@
 
 
     <DockPanel Grid.Row="2"
+               Grid.Column="0"
                Background="White">
       <TextBlock>Tags:</TextBlock>
       <TextBlock>Tag1</TextBlock>
       <TextBlock>Tag2</TextBlock>
       <TextBlock>Tag3</TextBlock>
       <TextBlock>Tag4</TextBlock>
-      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">Rate this article</TextBlock>
-      <TextBlock DockPanel.Dock="Right" TextAlignment="Right">4/5</TextBlock>
+      <TextBlock DockPanel.Dock="Right" TextAlignment="Right" >Rate this article     4/5</TextBlock>
     </DockPanel>
     
   </Grid>
