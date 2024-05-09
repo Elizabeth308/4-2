@@ -5,8 +5,8 @@
         mc:Ignorable="d" 
         Width="800" 
         Height="700"
-        x:Class="ContainersAndDesign.MainWindow"
-        Title="ContainersAndDesign"
+        x:Class="Program.MainWindow"
+        Title="Program"
         CanResize="True">
   
   <Window.Styles>
@@ -59,7 +59,7 @@
 
 
     <StackPanel Grid.Row="1"
-                Gird.Column="1"
+                Grid.Column="1"
                 Orientation="Vertical"
                 Background="White">
       <TextBlock TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque condimentum faucibus. Donec ac suscipit dolor. Etiam sit amet elit est. Morbi pretium placerat varius. Aliquam tempor ultricies vehicula. Cras et leo vestibulum, eleifend velit condimentum, blandit metus.</TextBlock>
